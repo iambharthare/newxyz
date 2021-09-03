@@ -13,7 +13,7 @@ public class MarkModel {
 		Class.forName(rb.getString("driver"));
 		Connection conn= DriverManager.getConnection(rb.getString("url"), rb.getString("username"), rb.getString("password"));
 		conn.setAutoCommit(false);
-		PreparedStatement ps= conn.prepareStatement("Insert into marksheet values(?,?,?,?,?,?,?)");
+		PreparedStatement ps = conn.prepareStatement("Insert into marksheet values(?,?,?,?,?,?,?)");
 
 		ps.setInt(1, m.getID());
 		ps.setString(2, m.getRollNo());
